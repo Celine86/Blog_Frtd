@@ -1,0 +1,17 @@
+/* style général de la page */
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --primary-bg-color: #182534;
+    --primary-txt-color: #FFFFFF;
+    --secondary-txt-color: #1DD2AF;
+    --highlight-txt-color-: #ffff00;
+}
+body {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    background: var(--primary-bg-color);
+    color: var(--primary-txt-color);
+}
