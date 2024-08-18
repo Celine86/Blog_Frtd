@@ -9,11 +9,16 @@
 <body>
     <div data-include="./components/header.html"></div>
     <main>
-        <div>
-            <h1>My Blog</h1>
-        </div>
+        <section id="allPosts">
+            <template id="templatePosts">
+                <h1 id="postTitle"></h1>
+                <p id="postContent"></p>
+            </template>
+        </section>
     </main>
     <div data-include="./components/footer.html"></div>
+    <script src="./scripts/conf.js"></script>
     <script src="./scripts/include.js"></script>
+    <script src="./scripts/fetchPosts.js"></script>
 </body>
 </html>
