@@ -13,6 +13,7 @@ async function showPosts() {
                 const seePost = document.importNode(templatePosts.content, true)
                 seePost.getElementById('postTitle').textContent = post.title
                 seePost.getElementById('postContent').textContent = (post.content.length > 120 ? post.content.slice(0, 120) + '...' : post.content)
+                seePost.getElementById('postLink').href = `post.html?id=${post.id}`
                 document.getElementById('allPosts').appendChild(seePost)  
             }
         } else {

@@ -3,24 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog</title>
+    <title>This Post</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div data-include="./components/header.html"></div>
     <main>
-        <section id="allPosts">
-            <template id="templatePosts">
-                <a id="postLink" href="#">
-                    <h1 id="postTitle"></h1>
-                    <p id="postContent"></p>
-                </a>
+        <section id="thisPost">
+            <template id="templateThisPost">
+                <h1 id="thisPostTitle"></h1>
+                <p id="thisPostContent"></p>
             </template>
         </section>
     </main>
     <div data-include="./components/footer.html"></div>
     <script src="./scripts/conf.js"></script>
     <script src="./scripts/include.js"></script>
-    <script src="./scripts/fetchPosts.js"></script>
+    <script src="./scripts/fetchPost.js"></script>
 </body>
 </html>
