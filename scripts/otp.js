@@ -3,13 +3,7 @@ if (el) {
     el.addEventListener('submit', async function sendLoginInfos(e) {
         e.preventDefault();
 
-
         let email = sessionStorage.getItem('email');
-        /*if (savedEmail) {
-            email.innerHTML = savedEmail;
-        }*/
-    
-        //let email = document.getElementById('email').value;
         let otp = document.getElementById('codeOtp').value;
     
         if(!otp) {
@@ -29,8 +23,11 @@ if (el) {
                 }) 
                 if(response.status === 200) { 
                     response = await response.json()
+                    console.log(response)
                     sessionStorage.setItem("token", response.token)
-                    //sessionStorage.setItem("email", email)
+                    sessionStorage.setItem("username", response.username)
+                    sessionStorage.setItem("useremail", response.email)
+                    sessionStorage.setItem("loginmsg", response.message)
                     window.location = 'backoffice.html';
                 } else { 
                     alert ("OTP incorrect");

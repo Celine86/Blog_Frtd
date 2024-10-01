@@ -6,7 +6,6 @@ async function showPosts() {
         if(response.status === 200) { 
             const data = await response.json();
             const allPosts = data.allPosts;
-            console.log(data)
             for (let post in allPosts){
                 post = allPosts[post]
                 const templatePosts = document.getElementById('templatePosts')

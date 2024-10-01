@@ -23,7 +23,6 @@ if (el) {
                 }) 
                 if(response.status === 200) { 
                     response = await response.json()
-                    //sessionStorage.setItem("token", response.token)
                     sessionStorage.setItem("email", email)
                     window.location = 'otp.html';
                 } else { 
