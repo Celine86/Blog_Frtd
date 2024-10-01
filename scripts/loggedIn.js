@@ -12,9 +12,11 @@ async function fetchUser() {
                 }
             })           
             if(response.status === 200) { 
-                console.log('bien connecté')
+                console.log('bien connecté');
+                localStorage.setItem('isAuthenticated', 'true');
             } else {
-                console.log('non autorisé')
+                console.log('non autorisé');
+                localStorage.setItem('isAuthenticated', 'false');
             }
         }catch(error) {
             console.log(error)
