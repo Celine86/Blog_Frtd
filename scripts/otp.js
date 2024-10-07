@@ -28,9 +28,11 @@ if (el) {
                     sessionStorage.setItem("username", response.username)
                     sessionStorage.setItem("useremail", response.email)
                     sessionStorage.setItem("loginmsg", response.message)
+                    sessionStorage.setItem('isAuthenticated', true)
                     window.location = 'backoffice.html';
                 } else { 
-                    alert ("OTP incorrect");
+                    alert ("OTP incorrect")
+                    sessionStorage.setItem('isAuthenticated', false)
                 }
             } catch (error) {
                 console.log(error);
