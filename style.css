@@ -9,7 +9,8 @@
     --highlight-border-color: #ffff00;
     --primary-txt-color: #FFFFFF;
     --secondary-txt-color: #1DD2AF;
-    --highlight-txt-color-: #ffff00;
+    --highlight-txt-color: #ffff00;
+    --disabled-txt-color: #808080;
 }
 body {
     font-family: Arial, sans-serif;
@@ -47,4 +48,31 @@ aside {
     padding: 0.5rem;
     margin: 1rem 0 1rem 1rem;
     border: 0.15rem solid var(--border-color)
+}
+.posts {
+    height: 80vh;
+    display: grid;
+    place-items: center;
+}
+.pagination {
+    height: 5vh;
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+
+}
+.paginationBtn {
+    color: var(--secondary-txt-color);
+    background-color: var(--primary-bg-color);
+    border: none;
+}
+.paginationBtn:hover {
+    color: var(--highlight-txt-color);
+    cursor: pointer;
+}
+.paginationBtn:disabled {
+    color: var(--disabled-txt-color);
+}
+.paginationNumbers {
+    margin: 0 2rem;
+    align-self: center;
 }
