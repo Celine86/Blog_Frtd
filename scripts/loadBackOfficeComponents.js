@@ -1,9 +1,11 @@
 function showElement(elementId) {
-    const allPostContainers = document.querySelectorAll(".backofficeComponent");
+    const allBackofficeContainers = document.querySelectorAll(".backofficeComponent");
+    const defaultBackofficeContainer = document.querySelector(".backofficeDefault");
 
-    allPostContainers.forEach(container => {
+    allBackofficeContainers.forEach(container => {
         container.style.display = "none";
     });
+    defaultBackofficeContainer.style.display = "none";
 
     const selectedElement = document.getElementById(elementId);
     selectedElement.style.display = "block";
@@ -16,6 +18,9 @@ function addClickListener(buttonId, elementId) {
     });
 }
 
-addClickListener("loadCreatePost", "createPost");
+
+addClickListener("loadDefaultBackoffice", "defaultBackoffice");
 addClickListener("loadSeePosts", "seePosts");
+addClickListener("loadCreatePost", "createPost");
 addClickListener("loadImages", "images");
+

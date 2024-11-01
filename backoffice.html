@@ -12,11 +12,18 @@
 
     <main class="backoffice">
         <article>
-            <div class="backofficeComponent" id="createPost" data-include="./components/createPost.html"></div>
+            <div class="backofficeDefault" id="defaultBackoffice" data-include="./components/defaultBackoffice.html"></div>
             <div class="backofficeComponent" id="seePosts" data-include="./components/seePosts.html"></div>
+            <div class="backofficeComponent" id="createPost" data-include="./components/createPost.html"></div>
             <div class="backofficeComponent" id="images" data-include="./components/images.html"></div>
         </article> 
         <aside>
+            <figure>
+                <figcaption>Home</figcaption>
+                <ul>
+                    <li><a href="#" id="loadDefaultBackoffice">Accueil</a></li>
+                </ul>
+            </figure>
             <figure>
                 <figcaption>Articles</figcaption>
                 <ul>
