@@ -12,9 +12,25 @@
 
     <main class="backoffice">
         <article>
-            <p>Content</p>
+            <div class="backofficeComponent" id="createPost" data-include="./components/createPost.html"></div>
+            <div class="backofficeComponent" id="seePosts" data-include="./components/seePosts.html"></div>
+            <div class="backofficeComponent" id="images" data-include="./components/images.html"></div>
         </article> 
-        <aside><p>Sidebar</p></aside> 
+        <aside>
+            <figure>
+                <figcaption>Articles</figcaption>
+                <ul>
+                    <li><a href="#" id="loadSeePosts">Gérer les articles</a></li>
+                    <li><a href="#" id="loadCreatePost">Créer un nouvel article</a></li>
+                </ul>
+            </figure>
+            <figure>
+                <figcaption>Images</figcaption>
+                <ul>
+                    <li><a href="#" id="loadImages">Bibliothèque d'Images</a></li>
+                </ul>
+            </figure>
+        </aside> 
     </main>
 
     <div data-include="./components/footer.html"></div>
@@ -22,5 +38,6 @@
     <script src="./scripts/include.js"></script>
     <script src="./scripts/isAuthenticated.js"></script>
     <script src="./scripts/loggedIn.js"></script>
+    <script src="./scripts/loadBackOfficeComponents.js"></script>
 </body>
 </html>
