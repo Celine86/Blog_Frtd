@@ -39,6 +39,9 @@ a:hover {
 ul {
     list-style: none;
 }
+figure {
+    margin: 1rem 0 0 0;
+}
 /* BackOffice */
 .backoffice {
     display: grid;

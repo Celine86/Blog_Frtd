@@ -1,4 +1,3 @@
-
 async function fetchUser() {
     token =  sessionStorage.getItem("token");
     if(!token) {
