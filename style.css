@@ -79,7 +79,6 @@ aside {
     height: 5vh;
     display: inline-grid;
     grid-template-columns: auto auto auto;
-
 }
 .paginationBtn {
     color: var(--secondary-txt-color);
@@ -98,3 +97,56 @@ aside {
     align-self: center;
 }
 /* */
+.images {
+    display: grid;
+    place-items: center;
+}
+.controlsImgs {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    width: 95%;
+    height: auto;
+}
+.control1Imgs {
+    /*margin: 0 2rem;*/
+    align-self: center;
+    grid-column: 1;
+    justify-self: start;
+}
+.control3Imgs {
+    grid-column: 3;
+    justify-self: end;
+}
+.templateImgs {
+    display: grid;
+    /*min-height: 90vh;*/
+    gap: 0.25rem;
+    padding: 0.25rem;
+    width: 100%;
+    box-sizing: border-box;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    justify-items: center;
+    align-items: center;
+}
+.templateImgs a {
+    text-decoration: none;
+    color: var(--secondary-txt-color);
+}
+.childImg {
+    border: 0.15rem solid var(--border-color);
+    width: 15rem;
+    /*padding: 0.5rem;*/
+    margin: 0.5rem;
+}
+.childImg:hover {
+    transform: scale(0.9);
+    cursor: pointer;
+}
+.childImg img {
+    width: 15rem;
+    height: auto;
+    padding: 0 0 1rem 0;
+}
+.titleImg {
+    padding: 0.5rem 0 0.5rem 0.5rem;
+}
