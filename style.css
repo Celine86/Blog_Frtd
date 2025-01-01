@@ -108,7 +108,6 @@ aside {
     height: auto;
 }
 .control1Imgs {
-    /*margin: 0 2rem;*/
     align-self: center;
     grid-column: 1;
     justify-self: start;
@@ -119,7 +118,6 @@ aside {
 }
 .templateImgs {
     display: grid;
-    /*min-height: 90vh;*/
     gap: 0.25rem;
     padding: 0.25rem;
     width: 100%;
@@ -135,7 +133,6 @@ aside {
 .childImg {
     border: 0.15rem solid var(--border-color);
     width: 15rem;
-    /*padding: 0.5rem;*/
     margin: 0.5rem;
 }
 .childImg:hover {
@@ -149,4 +146,19 @@ aside {
 }
 .titleImg {
     padding: 0.5rem 0 0.5rem 0.5rem;
+}
+/* */
+.templateMyImg {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 100vh;
+}
+.templateMyImg img {
+    width: 30rem;
+    height: auto;
+    padding: 1rem 0;
+}
+.templateMyImg h1 {
+    color: var(--secondary-txt-color);
 }
