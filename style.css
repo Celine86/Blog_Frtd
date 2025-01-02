@@ -14,7 +14,7 @@
 }
 body {
     font-family: Arial, sans-serif;
-    font-weight: bold;
+    /*font-weight: bold;*/
     background: var(--primary-bg-color);
     color: var(--primary-txt-color);
 }
@@ -161,4 +161,75 @@ aside {
 }
 .templateMyImg h1 {
     color: var(--secondary-txt-color);
+}
+/* Editeur */
+.title {
+    border: 0.10rem solid var(--border-color);
+    width: 75vw;
+    height: 1rem; 
+    padding: 0.15rem;
+    margin: 0.5rem 0.15rem 0.5rem 0.15rem;
+}
+.content {
+    border: 0.10rem solid var(--border-color);
+    width: 75vw;
+    min-height: 15rem;
+    padding: 0.15rem;
+    margin: 0.5rem 0.15rem 0.5rem 0.15rem;
+}
+.content img {
+    max-width: 20rem;
+    height: auto;
+}
+.toolbar {
+    display: flex;
+    flex-direction: row;
+    gap: 0.25rem;
+    width: 75vw;
+    height: 2rem;
+    padding: 0.15rem;
+    margin: 0.25rem 0;
+}
+.toolbar .btn {
+    border: 0.15rem solid var(--border-color);
+    color: var(--primary);
+    background-color: var(--primary-bg-color);
+    padding: 0.15rem;
+    width: 2.15rem;
+    height: 2.15rem;
+}
+.toolbar .btn img {
+    width: 15px;
+    height: 15px;
+    display: block;
+    margin: auto;
+}
+.bold {
+    font-weight: bold;
+}
+.italic {
+    font-style: italic;
+}
+.underline {
+    text-decoration-line: underline;
+}
+.actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    width: 75.75vw;
+}
+/* */
+.btn {
+    border: 0.15rem solid var(--border-color);
+    color: var(--primary);
+    background-color: var(--primary-bg-color);
+    padding: 0.15rem;
+    width: auto;
+    height: 2rem;
+    margin: 0.15rem;
+}
+.btn:hover {
+    cursor: pointer;
+    border: 0.15rem solid var(--highlight-border-color);
 }

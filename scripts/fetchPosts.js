@@ -34,8 +34,8 @@ function renderPage(page) {
         const post = allPosts[i];
         const seePost = document.importNode(template.content, true);
         
-        seePost.getElementById('postTitle').textContent = post.title;
-        seePost.getElementById('postContent').textContent = (post.content.length > 120 ? post.content.slice(0, 120) + '...' : post.content);
+        seePost.getElementById('postTitle').innerHTML = post.title;
+        seePost.getElementById('postContent').innerHTML = (post.content.length > 120 ? post.content.slice(0, 120) + '...' : post.content);
         seePost.getElementById('postLink').href = `post.html?id=${post.id}`;
         
         /*const archiveButton = seePost.getElementById('archiveButton');

@@ -11,8 +11,8 @@ async function fetchPost() {
             const data = await response.json();
             const templateMyPost = document.getElementById('templateThisPost')
             const seePost = document.importNode(templateMyPost.content, true)
-            seePost.getElementById('thisPostTitle').textContent = data.title
-            seePost.getElementById('thisPostContent').textContent = data.content
+            seePost.getElementById('thisPostTitle').innerHTML = data.title
+            seePost.getElementById('thisPostContent').innerHTML = data.content
             document.getElementById('thisPost').appendChild(seePost)  
         } else {
             console.log(response)

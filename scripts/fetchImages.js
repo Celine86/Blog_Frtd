@@ -40,31 +40,9 @@ function renderPage(page) {
         seeImg.getElementById('imgTitle').textContent = img.imageTitle
         seeImg.getElementById('imgUrl').src = img.imageUrl
         seeImg.getElementById('imgLink').href = `components/image.html?id=${img.id}`
-        /*seeImg.getElementById('imgLink').addEventListener('click', function(event) {
-            event.preventDefault();
-            const url = `components/image.html?id=${img.id}`;
-            window.open(url, 'popupWindow', 'width=600,height=400,scrollbars=yes');
-        });*/
-        seeImg.getElementById('imgLink').addEventListener('click', function(event) {
-            event.preventDefault(); 
-        
-            const url = `components/image.html?id=${img.id}`;
-            const popupWidth = 1200;
-            const popupHeight = 800;
-        
-            const screenLeft = window.screenLeft || window.screenX;
-            const screenTop = window.screenTop || window.screenY;
-            const windowWidth = window.innerWidth;
-            const windowHeight = window.innerHeight;
-        
-            const left = screenLeft + (windowWidth - popupWidth) / 2;
-            const top = screenTop + (windowHeight - popupHeight) / 2;
-
-            window.open(
-                url,
-                'popupWindow',
-                `width=${popupWidth},height=${popupHeight},top=${top},left=${left},scrollbars=yes,resizable=yes`
-            );
+        seeImg.getElementById('imgLink').addEventListener('click', (event) => {
+            const urlTemplate = `components/image.html?id=${img.id}`;
+            openPopup(event, urlTemplate);
         });
         document.getElementById('allImgs').appendChild(seeImg)  
         imgsContainer.appendChild(seeImg);

@@ -1,5 +1,25 @@
-<div>
-    <h2>Créer article</h2>
-    <!-- <button onclick="showComponent('images')">Cliquez ici</button> -->
-     
+<div id="editor">
+    <h2>Nouvel article</h2>
+    <div class="editor">
+        <div class="toolbar">
+            <button class="btn bold" onclick="commande('bold');">G</button>
+            <button class="btn italic" onclick="commande('italic');">I</button>
+            <button class="btn underline" onclick="commande('underline');">U</button>
+            <button class="btn iconbtn" onclick="commande('justifyleft');"><img src="/Blog/Blog_Frtd/assets/editor/align_left_icon.png"></button>
+            <button class="btn" onclick="commande('justifycenter');"><img src="/Blog/Blog_Frtd/assets/editor/align_center_icon.png"></button>
+            <button class="btn" onclick="commande('justifyright');"><img src="/Blog/Blog_Frtd/assets/editor/align_right_icon.png"></button>
+            <button class="btn" onclick="commande('insertImage')">IMG</button>
+        </div>
+        <div class="actions">
+            <button class="btn" onclick="save()">Enregistrer Brouillon</button>
+            <button class="btn" onclick="deleteDraft()">Supprimer Brouillon</button>
+        </div>
+        <form action="POST" id="sendPost">
+            <div id="title" class="title" contentEditable></div>
+            <div id="content" class="content" contentEditable></div>
+            <div class="actions">
+                <button class="btn" type="submit">Valider</button>
+            </div>
+        </form>
+    </div>
 </div>

@@ -6,15 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BackOffice</title>
     <script type="module" src="./scripts/conf.js"></script>
-    <!-- <link rel="stylesheet" href="./style.css"> -->
 </head>
 <body>
     <div data-include="./components/header.html"></div>
     <main class="backoffice">
         <article>
-            <div class="backofficeDefault" id="defaultBackoffice" data-include="./components/defaultBackoffice.html"></div>
             <div class="backofficeComponent" id="seePosts" data-include="./components/seePosts.html"></div>
-            <div class="backofficeComponent" id="createPost" data-include="./components/createPost.html"></div>
+            <div class="backofficeDefault" id="createPost" data-include="./components/createPost.html"></div>
             <div class="backofficeComponent" id="images" data-include="./components/images.html"></div>
             <div class="backofficeComponent" id="image" data-include="./components/image.html"></div>
         </article> 
@@ -23,7 +21,6 @@
                 <figcaption>Home</figcaption>
                 <ul>
                     <li><a href="./index.html">Blog</a></li>
-                    <li><a href="#" id="loadDefaultBackoffice">Accueil</a></li>
                 </ul>
             </figure>
             <figure>
@@ -56,7 +53,10 @@
     <script src="./scripts/loggedIn.js"></script>
     <script src="./scripts/loadBackOfficeComponents.js"></script>
     <script src="./scripts/showComponent.js"></script>
+    <script src="./scripts/editor.js" defer></script>
+    <script src="./scripts/quickSave.js" defer></script>
     <script src="./scripts/fetchImages.js" defer></script>
+    <script src="./scripts/openPopUp.js" defer></script>
     <script src="./scripts/logout.js"></script>
 </body>
 </html>

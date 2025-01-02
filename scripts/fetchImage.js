@@ -26,18 +26,17 @@ async function fetchMyImg() {
 }
 fetchMyImg();
 
-/*
 function getMyImgUrl() {
     const myImg = localStorage.getItem('myImgUrl');
     const existingContent = localStorage.getItem('content');
     const data = existingContent ? existingContent + `<img src="${myImg}"></img>` : `<img src="${myImg}"></img>`;
     localStorage.setItem('content', data);
     localStorage.removeItem("myImgUrl");
-    window.location = 'editor.html';
+    window.opener.location = `${baseURL}backoffice.html`;
+    self.close()
 }
 
 async function dontGetMyImgUrl() {
     localStorage.removeItem("myImgUrl")
-    window.location = 'images.html';
+    self.close();
 }
-*/
