@@ -9,7 +9,8 @@ function commande(name, arg) {
         if(!myImgUrl){
           localStorage.setItem('title', title.innerHTML);
           localStorage.setItem('content', content.innerHTML);
-          showComponent('images');
+          showComponent("loadImages", "images", "./fetchImages.js");
+          //showComponent('images');
           //window.location = 'images.html';
         } else {
           let imgUrl =  localStorage.getItem("myImgUrl")

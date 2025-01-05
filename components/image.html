@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image</title>
-    <script type="module" src="../scripts/conf.js"></script>
-</head>
-<body>
-    <main class="general">
-        <section id="myImg" class="templateMyImg"></section>
-            <template id="templateMyImg">
-                <div>
-                    <h1 id="myImgTitle">Title</h1>
-                    <img id="myImgUrl" src="#">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Image</title>
+        <script type="module" src="../scripts/conf.js"></script>
+    </head>
+    <body>
+        <main class="general">
+            <section id="myImg" class="templateMyImg"></section>
+                <template id="templateMyImg">
                     <div>
-                        <button class="btn" id='getMyImgUrl' onclick="getMyImgUrl()">Insérer</button>
-                        <button class="btn" id='dontGetMyImgUrl' onclick="dontGetMyImgUrl()">Abandonner</button>    
+                        <h1 id="myImgTitle">Title</h1>
+                        <img id="myImgUrl" src="#">
+                        <div>
+                            <button class="btn" id='getMyImgUrl' onclick="getMyImgUrl()">Insérer</button>
+                            <button class="btn" id='dontGetMyImgUrl' onclick="dontGetMyImgUrl()">Abandonner</button>    
+                        </div>
                     </div>
-                </div>
-            </template>
-    </main>
-    <script src="../scripts/conf.js"></script>
-    <script src="../scripts/isAuthenticated.js"></script>
-    <script src="../scripts/loggedIn.js"></script>
-    <script src="../scripts/fetchImage.js"></script>
-</body>
+                </template>
+        </main>
+        <script src="../scripts/conf.js"></script>
+        <script src="../scripts/isAuthenticated.js"></script>
+        <script src="../scripts/loggedIn.js"></script>
+        <script src="../scripts/fetchImage.js"></script>
+    </body>
 </html>

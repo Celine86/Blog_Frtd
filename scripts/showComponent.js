@@ -1,3 +1,3 @@
-function showComponent(componentId) {
-    showElement(componentId);
+function showComponent(buttonId, elementId, modulePath) {
+    addClickListener(buttonId, elementId, modulePath);
 }

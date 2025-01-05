@@ -1,7 +1,30 @@
-let currentPage = 1;
-let imgsPerPage = 10;
-let totalPages = 1;
+/*document.addEventListener('DOMContentLoaded', () => {
+    const includeElements = document.querySelectorAll('[data-include]');
+    includeElements.forEach((el) => {
+      const url = el.getAttribute('data-include');
+      if (url) {
+        fetch(url)
+            .then((response) => response.text())
+            .then((html) => {
+                el.innerHTML = html;
+                if (el.id === 'images') {
+                    console.log("dans images")
+                showImages();
+                renderPage(page);
+                renderPaginationControls();
+                }
+            })
+            .catch((error) => console.error('Error loading component:', error));
+      }
+    });
+});*/
+
+let imgCurrentPage = 1;
+let imgsPerPage = 4;
+let imgTotalPages = 1;
 let allImgs = [];
+let allImgsSorted = [];
+
 
 async function showImages() {
     try {
@@ -15,8 +38,10 @@ async function showImages() {
         if (response.status === 200) {
             const data = await response.json();
             allImgs = data.allImages;
-            totalPages = Math.ceil(allImgs.length / imgsPerPage);
-            renderPage(currentPage);
+            allImgsSorted = allImgs.sort((a, b) => b.id - a.id);
+
+            imgTotalPages = Math.ceil(allImgsSorted.length / imgsPerPage);
+            renderPage(imgCurrentPage);
             renderPaginationControls();
         } else {
             console.log(response);
@@ -28,14 +53,14 @@ async function showImages() {
 
 function renderPage(page) {
     const imgsContainer = document.getElementById('allImgs');
-    const template = document.getElementById('templateImgs');
+    const imgTemplate = document.getElementById('templateImgs');
     imgsContainer.innerHTML = '';
-    const startIndex = (page - 1) * imgsPerPage;
-    const endIndex = Math.min(startIndex + imgsPerPage, allImgs.length);
+    const imgStartIndex = (page - 1) * imgsPerPage;
+    const imgEndIndex = Math.min(imgStartIndex + imgsPerPage, allImgsSorted.length);
 
-    for (let i = startIndex; i < endIndex; i++) {
-        const img = allImgs[i];
-        const seeImg = document.importNode(template.content, true);
+    for (let i = imgStartIndex; i < imgEndIndex; i++) {
+        const img = allImgsSorted[i];
+        const seeImg = document.importNode(imgTemplate.content, true);
         
         seeImg.getElementById('imgTitle').textContent = img.imageTitle
         seeImg.getElementById('imgUrl').src = img.imageUrl
@@ -50,35 +75,35 @@ function renderPage(page) {
 };
 
 function renderPaginationControls() {
-    const paginationContainer = document.getElementById('paginationControls');
+    const paginationContainer = document.getElementById('imgPaginationControls');
     paginationContainer.innerHTML = '';
 
     const prevButton = document.createElement('button');
-    prevButton.classList.add('paginationBtn');
+    prevButton.classList.add('imgPaginationBtn');
     prevButton.textContent = '<<';
-    prevButton.disabled = currentPage === 1;
+    prevButton.disabled = imgCurrentPage === 1;
     prevButton.onclick = () => {
-        if (currentPage > 1) {
-            currentPage--;
-            renderPage(currentPage);
+        if (imgCurrentPage > 1) {
+            imgCurrentPage--;
+            renderPage(imgCurrentPage);
             renderPaginationControls();
         }
     };
     paginationContainer.appendChild(prevButton);
 
     const pageInfo = document.createElement('span');
-    pageInfo.classList.add('paginationNumbers');
-    pageInfo.textContent = `${currentPage} / ${totalPages}`;
+    pageInfo.classList.add('imgPaginationNumbers');
+    pageInfo.textContent = `${imgCurrentPage} / ${imgTotalPages}`;
     paginationContainer.appendChild(pageInfo);
 
     const nextButton = document.createElement('button');
-    nextButton.classList.add('paginationBtn');
+    nextButton.classList.add('imgPaginationBtn');
     nextButton.textContent = '>>';
-    nextButton.disabled = currentPage === totalPages;
+    nextButton.disabled = imgCurrentPage === imgTotalPages;
     nextButton.onclick = () => {
-        if (currentPage < totalPages) {
-            currentPage++;
-            renderPage(currentPage);
+        if (imgCurrentPage < imgTotalPages) {
+            imgCurrentPage++;
+            renderPage(imgCurrentPage);
             renderPaginationControls();
         }
     };

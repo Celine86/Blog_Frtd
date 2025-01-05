@@ -1,3 +1,24 @@
+/*document.addEventListener('DOMContentLoaded', () => {
+    const includeElements = document.querySelectorAll('[data-include]');
+    includeElements.forEach((el) => {
+      const url = el.getAttribute('data-include');
+      if (url) {
+        fetch(url)
+            .then((response) => response.text())
+            .then((html) => {
+                el.innerHTML = html;
+                if (el.id === 'seePost') {
+                    console.log("dans posts")
+                fetchPosts();
+                renderPage(page);
+                renderPaginationControls();
+                }
+            })
+            .catch((error) => console.error('Error loading component:', error));
+      }
+    });
+});*/
+
 let currentPage = 1;
 let postsPerPage = 6;
 let totalPages = 1;
@@ -38,18 +59,22 @@ function renderPage(page) {
         seePost.getElementById('postContent').innerHTML = (post.content.length > 120 ? post.content.slice(0, 120) + '...' : post.content);
         seePost.getElementById('postLink').href = `post.html?id=${post.id}`;
         
-        /*const archiveButton = seePost.getElementById('archiveButton');
+        /*
+        const archiveButton = seePost.getElementById('archiveButton');
         if (archiveButton) {
             archiveButton.addEventListener('click', () => archivePost(post.id));
-        }*/
+        }
+        */
 
         postsContainer.appendChild(seePost);
     }
 };
 
-/*function archivePost(postId) {
+/*
+function archivePost(postId) {
     console.log(`Post avec l'ID ${postId} archivé.`);
-};*/
+};
+*/
  
 function renderPaginationControls() {
     const paginationContainer = document.getElementById('paginationControls');

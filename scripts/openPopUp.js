@@ -18,4 +18,10 @@ function openPopup(event, urlTemplate) {
         'popupWindow',
         `width=${popupWidth},height=${popupHeight},top=${top},left=${left},scrollbars=yes,resizable=yes`
     );
-}
+};
+
+function openAddImage() {
+    const event = new Event('click'); 
+    const urlTemplate = `components/createImage.html`;
+    openPopup(event, urlTemplate);
+};

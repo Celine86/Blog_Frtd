@@ -1,62 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="./assets/icons/Cat.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BackOffice</title>
-    <script type="module" src="./scripts/conf.js"></script>
-</head>
-<body>
-    <div data-include="./components/header.html"></div>
-    <main class="backoffice">
-        <article>
-            <div class="backofficeComponent" id="seePosts" data-include="./components/seePosts.html"></div>
-            <div class="backofficeDefault" id="createPost" data-include="./components/createPost.html"></div>
-            <div class="backofficeComponent" id="images" data-include="./components/images.html"></div>
-            <div class="backofficeComponent" id="image" data-include="./components/image.html"></div>
-        </article> 
-        <aside>
-            <figure>
-                <figcaption>Home</figcaption>
-                <ul>
-                    <li><a href="./index.html">Blog</a></li>
-                </ul>
-            </figure>
-            <figure>
-                <figcaption>Articles</figcaption>
-                <ul>
-                    <li><a href="#" id="loadSeePosts">Gérer les articles</a></li>
-                    <li><a href="#" id="loadCreatePost">Créer un nouvel article</a></li>
-                </ul>
-            </figure>
-            <figure>
-                <figcaption>Images</figcaption>
-                <ul>
-                    <li><a href="#" id="loadImages">Bibliothèque d'Images</a></li>
-                </ul>
-            </figure>
-            <figure>
-                <hr class="dashed">
-            </figure>
-            <figure>
-                <ul>
-                    <li><a href="#" id="logout">Déconnexion</a></li>
-                </ul>
-            </figure>
-        </aside> 
-    </main>
-    <div data-include="./components/footer.html"></div>
-    <script src="./scripts/conf.js"></script>
-    <script src="./scripts/include.js"></script>
-    <script src="./scripts/isAuthenticated.js"></script>
-    <script src="./scripts/loggedIn.js"></script>
-    <script src="./scripts/loadBackOfficeComponents.js"></script>
-    <script src="./scripts/showComponent.js"></script>
-    <script src="./scripts/editor.js" defer></script>
-    <script src="./scripts/quickSave.js" defer></script>
-    <script src="./scripts/fetchImages.js" defer></script>
-    <script src="./scripts/openPopUp.js" defer></script>
-    <script src="./scripts/logout.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/svg+xml" href="./assets/icons/Cat.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BackOffice</title>
+        <script type="module" src="./scripts/conf.js"></script>
+    </head>
+    <body>
+        <div data-include="./components/header.html"></div>
+        <main class="backoffice">
+            <article>
+                <div class="backofficeDefault" id="createPost" data-include="./components/createPost.html"></div>
+                <div class="backofficeComponent" id="seePosts" data-include="./components/seePosts.html"></div>
+                <div class="backofficeComponent" id="images" data-include="./components/images.html"></div>
+                <div class="backofficeComponent" id="image" data-include="./components/image.html"></div>
+            </article> 
+            <aside>
+                <figure>
+                    <figcaption>Home</figcaption>
+                    <ul>
+                        <li><a href="./index.html">Blog</a></li>
+                    </ul>
+                </figure>
+                <figure>
+                    <figcaption>Articles</figcaption>
+                    <ul>
+                        <li><a href="#" id="loadSeePosts">Gérer les articles</a></li>
+                        <li><a href="#" id="loadCreatePost">Créer un nouvel article</a></li>
+                    </ul>
+                </figure>
+                <figure>
+                    <figcaption>Images</figcaption>
+                    <ul>
+                        <li><a href="#" id="loadImages">Bibliothèque d'Images</a></li>
+                    </ul>
+                </figure>
+                <figure>
+                    <hr class="dashed">
+                </figure>
+                <figure>
+                    <ul>
+                        <li><a href="#" id="logout">Déconnexion</a></li>
+                    </ul>
+                </figure>
+            </aside> 
+        </main>
+        <div data-include="./components/footer.html"></div>
+        <script src="./scripts/conf.js"></script>
+        <script src="./scripts/include.js"></script>
+        <script src="./scripts/isAuthenticated.js"></script>
+        <script src="./scripts/loggedIn.js"></script>
+        <script src="./scripts/loadBackOfficeComponents.js"></script>
+        <script src="./scripts/logout.js"></script>
+
+        <script src="./scripts/editor.js" defer></script>
+        <script src="./scripts/showComponent.js" defer></script>
+
+        <script src="./scripts/createPost.js" defer></script>
+
+        <script src="./scripts/openPopUp.js" defer></script>
+    </body>
 </html>

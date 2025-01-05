@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="./assets/icons/Cat.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog</title>
-    <script type="module" src="./scripts/conf.js"></script>
-    <!-- <link rel="stylesheet" href="./style.css"> -->
-</head>
-<body>
-    <div data-include="./components/header.html"></div>
-    <main class="general">
-        <section class="posts" id="allPosts"></section>
-        <template id="templatePosts">
-            <div class="post">
-                <h2 id="postTitle"></h2>
-                <p id="postContent"></p>
-                <a id="postLink" href="#">Lire plus</a>
-            </div>
-        </template>
-        <div class="pagination" id="paginationControls"></div>
-    </main>
-    <div data-include="./components/footer.html"></div>
-    <script src="./scripts/conf.js"></script>
-    <script src="./scripts/include.js"></script>
-    <script src="./scripts/fetchPosts.js" defer></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/svg+xml" href="./assets/icons/Cat.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Blog</title>
+        <script type="module" src="./scripts/conf.js"></script>
+    </head>
+    <body>
+        <div data-include="./components/header.html"></div>
+        <main class="general">
+            <section class="posts" id="allPosts"></section>
+            <template id="templatePosts">
+                <div class="post">
+                    <h2 id="postTitle"></h2>
+                    <p id="postContent"></p>
+                    <a id="postLink" href="#">Lire plus</a>
+                </div>
+            </template>
+            <div class="pagination" id="paginationControls"></div>
+        </main>
+        <div data-include="./components/footer.html"></div>
+        <script src="./scripts/conf.js"></script>
+        <script src="./scripts/include.js"></script>
+        <script src="./scripts/fetchPosts.js" defer></script>
+    </body>
 </html>

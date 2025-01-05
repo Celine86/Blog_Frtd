@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="./assets/icons/Cat.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <script type="module" src="./scripts/conf.js"></script>
-    <!-- <link rel="stylesheet" href="./style.css"> -->
-</head>
-<body>
-    <div data-include="./components/header.html"></div>
-    <main class="general">
-        <div class="connexion">
-            <form action="POST" id="login">
-                <label for="email">Nom d'Utilisateur</label><input type="email" id="email" name="email" placeholder="Nom d'Utilisateur" required>
-                <label for="password">Mot de Passe</label><input type="password" id="password" name="password" placeholder="Mot de Passe" required>
-                <button type="submit">Valider</button>
-            </form>
-        </div>
-    </main>
-    <div data-include="./components/footer.html"></div>
-    <script src="./scripts/conf.js"></script>
-    <script src="./scripts/include.js"></script>
-    <script src="./scripts/login.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/svg+xml" href="./assets/icons/Cat.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <script type="module" src="./scripts/conf.js"></script>
+    </head>
+    <body>
+        <div data-include="./components/header.html"></div>
+        <main class="general">
+            <div class="connexion">
+                <form action="POST" id="login">
+                    <label for="email">Nom d'Utilisateur</label><input type="email" id="email" name="email" placeholder="Nom d'Utilisateur" required>
+                    <label for="password">Mot de Passe</label><input type="password" id="password" name="password" placeholder="Mot de Passe" required>
+                    <button type="submit">Valider</button>
+                </form>
+            </div>
+        </main>
+        <div data-include="./components/footer.html"></div>
+        <script src="./scripts/conf.js"></script>
+        <script src="./scripts/include.js"></script>
+        <script src="./scripts/login.js"></script>
+    </body>
 </html>
