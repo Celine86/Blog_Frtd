@@ -1,30 +1,8 @@
-/*document.addEventListener('DOMContentLoaded', () => {
-    const includeElements = document.querySelectorAll('[data-include]');
-    includeElements.forEach((el) => {
-      const url = el.getAttribute('data-include');
-      if (url) {
-        fetch(url)
-            .then((response) => response.text())
-            .then((html) => {
-                el.innerHTML = html;
-                if (el.id === 'images') {
-                    console.log("dans images")
-                showImages();
-                renderPage(page);
-                renderPaginationControls();
-                }
-            })
-            .catch((error) => console.error('Error loading component:', error));
-      }
-    });
-});*/
-
 let imgCurrentPage = 1;
 let imgsPerPage = 4;
 let imgTotalPages = 1;
 let allImgs = [];
 let allImgsSorted = [];
-
 
 async function showImages() {
     try {

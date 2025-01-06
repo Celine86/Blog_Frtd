@@ -1,24 +1,3 @@
-/*document.addEventListener('DOMContentLoaded', () => {
-    const includeElements = document.querySelectorAll('[data-include]');
-    includeElements.forEach((el) => {
-      const url = el.getAttribute('data-include');
-      if (url) {
-        fetch(url)
-            .then((response) => response.text())
-            .then((html) => {
-                el.innerHTML = html;
-                if (el.id === 'seePost') {
-                    console.log("dans posts")
-                fetchPosts();
-                renderPage(page);
-                renderPaginationControls();
-                }
-            })
-            .catch((error) => console.error('Error loading component:', error));
-      }
-    });
-});*/
-
 let currentPage = 1;
 let postsPerPage = 6;
 let totalPages = 1;

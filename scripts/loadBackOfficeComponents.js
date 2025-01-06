@@ -48,4 +48,3 @@ function addClickListener(buttonId, elementId, modulePath) {
 addClickListener("loadSeePosts", "seePosts", "./fetchPosts.js");
 addClickListener("loadImages", "images", "./fetchImages.js");
 addClickListener("loadCreatePost", "createPost");
-//addClickListener("loadCreateImage", "createImage", "./createImage.js");

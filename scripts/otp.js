@@ -41,4 +41,4 @@ if (el) {
     });
 } else {
     console.log("no el")
-}
+};

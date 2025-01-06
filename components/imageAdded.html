@@ -8,10 +8,21 @@
     </head>
     <body>
         <main class="general">
-            <h1>Image ajoutée</h1>
+            <section id="thisImage" class="templateMyImg">
+                <template id="templateThisImage">
+                    <div>
+                        <h1 id="thisImageTitle">Title</h1>
+                        <img id="thisImageUrl" src="#">
+                        <div>
+                            <button class="btn" id="getThisImgUrl" onclick="getThisImgUrl()">Insérer</button> 
+                        </div>
+                    </div>
+                </template>
+            </section>
         </main>
         <script src="../scripts/conf.js"></script>
         <script src="../scripts/isAuthenticated.js"></script>
         <script src="../scripts/loggedIn.js"></script>
+        <script src="../scripts/fetchLastImage.js"></script>
     </body>
 </html>

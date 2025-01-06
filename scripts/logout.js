@@ -7,4 +7,4 @@ document.getElementById('logout').addEventListener('click', async function logou
     sessionStorage.removeItem("useremail")
     sessionStorage.removeItem("username")
     window.location = 'index.html';
-}) 
+});
