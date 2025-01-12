@@ -1,5 +1,5 @@
 let currentPage = 1;
-let postsPerPage = 6;
+let postsPerPage = 10;
 let totalPages = 1;
 let allPosts = [];
 
