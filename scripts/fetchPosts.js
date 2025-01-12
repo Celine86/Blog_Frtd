@@ -1,5 +1,5 @@
 let currentPage = 1;
-let postsPerPage = 10;
+let postsPerPage = 8;
 let totalPages = 1;
 let allPosts = [];
 
@@ -34,7 +34,7 @@ function renderPage(page) {
         const post = allPosts[i];
         const seePost = document.importNode(template.content, true);
         seePost.getElementById('postTitle').innerHTML = post.title;
-        seePost.getElementById('postContent').innerHTML = (post.content.length > 120 ? post.content.slice(0, 120) + '...' : post.content);
+        //seePost.getElementById('postContent').innerHTML = (post.content.length > 120 ? post.content.slice(0, 120) + '...' : post.content);
         seePost.getElementById('postLink').href = `post.html?id=${post.id}`
         postsContainer.appendChild(seePost);
     }
