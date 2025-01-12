@@ -42,7 +42,6 @@ function renderPage(page) {
         
         seeImg.getElementById('imgTitle').textContent = img.imageTitle
         seeImg.getElementById('imgUrl').src = img.imageUrl
-        seeImg.getElementById('imgLink').href = `components/image.html?id=${img.id}`
         seeImg.getElementById('imgLink').addEventListener('click', (event) => {
             const urlTemplate = `components/image.html?id=${img.id}`;
             openPopup(event, urlTemplate);

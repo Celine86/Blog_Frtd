@@ -44,7 +44,5 @@ function addClickListener(buttonId, elementId, modulePath) {
     });
     button.click();
 }
-
-addClickListener("loadSeePosts", "seePosts", "./fetchPosts.js");
 addClickListener("loadImages", "images", "./fetchImages.js");
 addClickListener("loadCreatePost", "createPost");

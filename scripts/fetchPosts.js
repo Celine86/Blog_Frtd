@@ -33,28 +33,13 @@ function renderPage(page) {
     for (let i = startIndex; i < endIndex; i++) {
         const post = allPosts[i];
         const seePost = document.importNode(template.content, true);
-        
         seePost.getElementById('postTitle').innerHTML = post.title;
         seePost.getElementById('postContent').innerHTML = (post.content.length > 120 ? post.content.slice(0, 120) + '...' : post.content);
-        seePost.getElementById('postLink').href = `post.html?id=${post.id}`;
-        
-        /*
-        const archiveButton = seePost.getElementById('archiveButton');
-        if (archiveButton) {
-            archiveButton.addEventListener('click', () => archivePost(post.id));
-        }
-        */
-
+        seePost.getElementById('postLink').href = `post.html?id=${post.id}`
         postsContainer.appendChild(seePost);
     }
 };
 
-/*
-function archivePost(postId) {
-    console.log(`Post avec l'ID ${postId} archivé.`);
-};
-*/
- 
 function renderPaginationControls() {
     const paginationContainer = document.getElementById('paginationControls');
     paginationContainer.innerHTML = '';
